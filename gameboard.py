@@ -23,4 +23,14 @@ class Gameboard:
             i += 1
             j = 1
 
-
+    def place_ships(self, ship, grid):
+        y = ship.y_axis_start
+        x = ship.x_axis_start
+        if ship.y_axis_start == ship.y_axis_end:
+            j = 0
+            while j <= ship.size:
+                grid[y+j][x] = ship.code
+        else:
+            i = 0
+            while i <= ship.size:
+                grid[y][x+i] = ship.code
