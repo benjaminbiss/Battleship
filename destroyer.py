@@ -4,5 +4,5 @@ class Destroyer(ship.Ship):
     
     def __init__(self, name):
         self.size = 2
-        self.code = 'd'
+        self.code = 'D'
         super().__init__(name)
